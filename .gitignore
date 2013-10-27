@@ -1,0 +1,122 @@
+Question 1. 
+Load = LDA
+Store = STA
+Add = ADD
+Subtract= SUB
+Input = INP
+Output = OUT
+End = HLT
+Branch if zero = BRZ
+Branch if zero or posistive = BRP
+Branch always = BRA
+D ata Location = DAT
+
+
+Question 3. 
+Load means to  load the contents of the given mailbox onto the accumulator. 
+Store means to store the contents of the mailbox of the given address.  
+The contents of the accumulator are not changed. 
+Add means to Add the contents of the given mailbox onto the accumulator . 
+This means the contents of the mailbox are not changed, and the actions of the accumulator 
+are not defined for add instructions that cause sums larger than 3 digits.
+Subtract means to do the opposite of add, so to subtract the contents of the given mailbox onto the accumulator. 
+the contents of the mailbox are not changed, and the actions of the accumulator are not defined for subtract 
+instructions that cause negative results -- however, a negative flag will be set so that BRP can be used properly.
+Input means to simply copy the value of whatever is in the accumulator to the outbox.
+This means that the contents of the accumulator will never change. 
+end causes the programme in this case The Little Man Computer to stop doing or executing the program
+Branch if zero means that if the contents or whatevr is present in the accumulator are 000, the 
+program counter will then be set to the goven address. As the program is stored in memory, data and 
+program instructions all have the same address/location format. 
+Branch if zero or posistive means that the contents of the accumulator are 000 or posistive the program
+counter will be set to the given address. This means that since mthe program is storewd in the memory, 
+data and program instructions all have the same address/location format exactly like branch if zero.
+Data means on the programme that when compiled, a program converts each instruction into a three-digit code.
+These codes are placed in sequential mailboxes.  Instead of a program component, this instruction will reserve
+the next mailbox for data storage. 
+
+
+Question 4.
+i. 
+INP 
+STA FIRST 
+INP
+STA SECOND 
+SUB FIRST 
+BRP SECONDBIG 
+LDA SECOND 
+OUT 
+LDA FIRST 
+OUT 
+BRA PROGEND SECONDBIG 
+LDA FIRST 
+OUT 
+LDA SECOND 
+OUT 
+PROGEND HLT 
+FIRST DAT
+SECOND DAT
+
+ii.
+INP 
+STA NUMBER
+LOOP LDA TOTAL 
+ADD NUMBER 
+STA TOTAL 
+LDA COUNTER 
+ADD ONE 
+STA COUNTER 
+LDA THREE 
+SUB COUNTER 
+BRP LOOP 
+LDA TOTAL
+OUT 
+HLT
+
+THREE DAT 003 
+COUNTER DAT 001
+ONE DAT 001 
+NUMBER DAT
+TOTAL DAT
+
+iii. INP
+STA ONE 
+INP 
+STA TWO
+INP 
+STA THREE 
+INP 
+STA FOUR
+INP 
+STA FIVE
+
+LDA FIVE 
+OUT 
+LDA FOUR
+OUT
+LDA THREE
+OUT 
+LDA TWO 
+OUT
+LDA ONE 
+OUT
+
+ONE DAT 
+TWO DAT
+THREE DAT
+FOUR DAT
+FIVE DAT
+
+5.  I am pleased with what i have been able to do, to improve though i would need some more help and have to spend more
+time on actually putting the assembly code into the little man computer progrtam itself apart fr5om that I was pleased 
+with the way I worked and found this exercise very useful. 
+
+6. It would be nearly impossible to write long complex programs on the LMC because of the limited amount of instructions
+and they fact that there are no easy ways to do certain things like multiplication. Also assembly code is not designed 
+for complex programs such as a word processor but if the LMC was to have many instructions for all the things needed it would be possible
+but the program would be extremly long and hard to use and understand. 
+
+
+
+
+
