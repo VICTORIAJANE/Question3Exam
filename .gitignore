@@ -113,7 +113,7 @@ with the way I worked and found this exercise very useful.
 
 6. It would be nearly impossible to write long complex programs on the LMC because of the limited amount of instructions
 and they fact that there are no easy ways to do certain things like multiplication. Also assembly code is not designed 
-for complex programs such as a word processor but if the LMC was to have many instructions for all the things needed it would be possible
+for complex programs such as a word processor but you can do anything with the assembly lagauge but if the LMC was to have many instructions for all the things needed it would be possible
 but the program would be extremly long and hard to use and understand. 
 
 
